@@ -18,7 +18,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Run Maven on a Unix agent.
-                sh "mvn -Dmaven.test.failure.ignore=true -f api-gateway clean package"                
+                sh "mvn -Dmaven.test.failure.ignore=true -f discovery-server clean package"                
             }
 
 
