@@ -28,7 +28,7 @@ pipeline {
                 // failed, record the test results and archive the jar file.
                 success {
                     junit '**discovery-server/target/surefire-reports/TEST-*.xml'
-                    archiveArtifacts 'api-gateway/target/*.jar'
+                    archiveArtifacts 'discovery-server/target/*.jar'
                 }
             }
         }
