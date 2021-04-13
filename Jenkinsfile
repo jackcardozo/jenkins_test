@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'linux'
+        label 'windows'
     }
 
     tools {
@@ -20,7 +20,9 @@ pipeline {
         stage('Build') {
             steps {
                 // Run Maven on a Unix agent.
-                sh "mvn -Dmaven.test.failure.ignore=true -f discovery-server clean package"                
+                //sh "mvn -Dmaven.test.failure.ignore=true -f discovery-server clean package"   
+                bat "mvn -Dmaven.test.failure.ignore=true -f discovery-server clean package"                
+
             }
 
 
